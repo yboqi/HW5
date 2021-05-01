@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainpage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditPicture">
+
+    <ImageView
+        android:id="@+id/photoiv"
+        android:layout_width="369dp"
+        android:layout_height="640dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/redb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:backgroundTint="#F44336"
+        android:text="Red"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/greenb" />
+
+    <Button
+        android:id="@+id/greenb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:backgroundTint="#4CAF50"
+        android:text="green"
+        app:layout_constraintStart_toEndOf="@+id/redb"
+        app:layout_constraintTop_toTopOf="@+id/blueb" />
+
+    <Button
+        android:id="@+id/blueb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="508dp"
+        android:text="Blue"
+        app:layout_constraintStart_toEndOf="@+id/greenb"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/clearb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FBFBFB"
+        android:text="clear"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/redb"
+        app:layout_constraintTop_toBottomOf="@+id/redb" />
+
+    <Button
+        android:id="@+id/undob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Undo"
+        android:textColor="#000000"
+        android:textColorHighlight="#000000"
+        app:layout_constraintStart_toStartOf="@+id/greenb"
+        app:layout_constraintTop_toBottomOf="@+id/greenb" />
+
+    <Button
+        android:id="@+id/doneb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="done"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/blueb"
+        app:layout_constraintTop_toBottomOf="@+id/blueb" />
+
+    <com.example.hw5.MyCanvas
+        android:id="@+id/myCanvas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
